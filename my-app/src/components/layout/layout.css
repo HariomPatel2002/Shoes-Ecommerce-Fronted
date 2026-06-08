@@ -1,23 +1,35 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-}
+@import "tailwindcss";
 
-ul li {
-  float: left;
-}
+@layer components {
+  /* NAVBAR CONTAINER */
+  .navbar-container {
+    @apply flex items-center justify-between bg-gray-800 px-5 py-1;
+  }
 
-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+  .navbar-left-spacer {
+    @apply w-56;
+  }
 
-ul li a:hover {
-  background-color: #111111;
+  /* NAVBAR LIST */
+  .navbar-list {
+    @apply flex justify-center gap-10 list-none m-0 p-0;
+  }
+
+  .navbar-item {
+    @apply float-none;
+  }
+
+  /* NAVBAR LINK */
+  .navbar-link {
+    @apply block text-white text-center px-4 py-3 no-underline font-sans hover:bg-gray-900 hover:rounded;
+  }
+
+  /* SEARCH BAR */
+  .navbar-search {
+    @apply w-56 flex justify-end;
+  }
+
+  .search-input {
+    @apply px-3 py-2 rounded-full border-none outline-none w-full max-w-48;
+  }
 }
